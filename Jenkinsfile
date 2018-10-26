@@ -8,4 +8,8 @@ pipeline {
       }
     }
   }
+  environment {
+    GOPATH = '/var/lib/jenkins/go/'
+    PATH = '/usr/lib/go-1.10/bin:${PATH}'
+  }
 }
