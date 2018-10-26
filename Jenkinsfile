@@ -15,5 +15,6 @@ go test -v -run TestTerraformAwsExample'''
   environment {
     GOPATH = '/var/lib/jenkins/go/'
     PATH = '/usr/lib/go-1.10/bin:${PATH}'
+    AWS_DEFAULT_REGION = 'us-east-1'
   }
 }
