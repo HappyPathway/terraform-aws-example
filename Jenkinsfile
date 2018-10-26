@@ -1,11 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('TerraTest') {
       steps {
         sh '''cd test;
-/var/lib/jenkins/go/bin/dep ensure;
-go test -v -run TestTerraformAwsExample;'''
+/var/lib/jenkins/go/bin/dep ensure;'''
       }
     }
   }
