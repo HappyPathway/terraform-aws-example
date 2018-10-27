@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('TerraTest') {
       steps {
-        sh '''cd test;
+        sh '''#!/bin/bash
+cd test;
 source ~/vault.sh
 AWS_CREDENTIALS=$(vault read aws/creds/ec2_admin --format=json)
 export AWS_ACCESS_KEY_ID=$(echo ${AWS_CREDENTIALS} | jq .data.access_key)
