@@ -5,7 +5,7 @@
 
 resource "aws_instance" "example" {
   ami           = "${data.aws_ami.ubuntu.id}"
-  instance_type = "t2.micro"
+  instance_type = "m4.large"
 
   tags {
     Name = "${var.instance_name}"
